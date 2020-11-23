@@ -14,7 +14,7 @@
 ## Demo
 Link: [https://xray-diagnosis.herokuapp.com/](https://xray-diagnosis.herokuapp.com/)
 
-[![](https://i.imgur.com/OQtj3qX.png](https://xray-diagnosis.herokuapp.com/)
+[![](https://i.imgur.com/OQtj3qX.png)](https://xray-diagnosis.herokuapp.com/)
 
 ## Overview
 This is a classifation app build in the Django Framework. The CNN takes a x-ray image, and predict if the image belongs to 1 of 3 classes: Normal, Covid or Pneumonia.
