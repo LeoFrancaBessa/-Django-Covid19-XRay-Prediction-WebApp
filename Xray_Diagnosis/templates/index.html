@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Xray Diagnosis</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts\font-awesome-4.7.0\css\font-awesome.min.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="post" action="{% url 'result' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+				<span class="contact100-form-title">
+					X-Ray AI Diagnosis
+				</span>
+
+				<span class="contact100-form-text">
+					Drag your X-Ray bellow and the AI
+					will diagnose it. 
+				</span>
+
+				<input type="file" name="xray_image" onchange="readURL(this);" />
+                <img id="blah" />
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p class="footer-text-left"> © 2020 Copyright: Leonardo França Bessa </p>
+		<div class="footer-content-right">
+  		<a href="https://github.com/LeoFrancaBessa" target="_blank"><img src="{% static 'images/github.jpeg' %}" class="icon-style" alt="Github icon" target="blank"></a>
+		</div>
+		<div class="footer-content-right">
+  		<a href="https://www.linkedin.com/in/leonardo-fran%C3%A7a-2246641a3/" target="_blank"><img src="{% static 'images/linkedin.png' %}" class="icon-style" alt="Linkedin icon"></a>
+		</div>
+		<div class="footer-content-right">
+  		<a href="https://www.instagram.com/leofranca___/" target="_blank"><img src="{% static 'images/instagram.png' %}" class="icon-style" alt="Instagram icon"></a>
+		</div>
+	</div>
+
+<script>
+
+function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+</script>
+
+</body>
+

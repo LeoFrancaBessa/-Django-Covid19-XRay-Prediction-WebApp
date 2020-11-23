@@ -1,0 +1,1 @@
+web: gunicorn Xray_Diagnosis.wsgi
