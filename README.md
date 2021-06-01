@@ -1,4 +1,4 @@
-# X-Ray diagnosis for Covid-19 :brazil: 
+# X-Ray Diagnosis for Covid-19 :brazil: 
 
 ## Table of Content
   * [Demo](#demo)
