@@ -41,8 +41,6 @@ This project is divided into two parts:
 In this classification problem, a convolutional neural network was used to train the model. The program receives a raw image, and then proceeds to clean it. After that, the 
 cleaned image is fed into the CNN, that proceeds to train and in the end classify the image. 
 
-## Data Collection
-
 
 
 ## Team
